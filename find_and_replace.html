@@ -1,0 +1,72 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/animate.css" type="text/css">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+document.getElementById("button").addEventListener('click', function () {
+    var text = document.getElementById('phrase');
+    text.text = (text.text + ' The Engineers Aesthetic and Architecture are two things that march together and <br> follow one from the other: the one being now at its full height, the other in an unhappy state of retrogression.');
+});
+</script>
+<script type="text/javascript">
+$(function () {
+    $('#button').on('click', function () {
+        var text = $('#phrase');
+        text.val(text.val() + ' The Engineers Aesthetic and Architecture are two things that march together and follow one from the other: the one being now at its full height, the other in an unhappy state of retrogression.');    
+    });
+});
+</script> 
+    <title>The End Of Archispeak</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Find and Replace</h1>
+        <p class="lead">Enter archispeak-riddled phrases below, the world you'd prefer to replace, and what you'd like to replace it with. Examples: diachronic, tectonics, massing, fenestration, and biomimicry</p>
+      </div>
+      <div id="result">
+        <div class="alert alert-info"><p><b>New Phrase:  </b> <em><span class="output"></span></em> </p></div>
+      </div>
+      <br>
+      <form id="findreplace" class="form-horizontal" role="form">
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="button" id="button" class="hvr-glow btn btn-primary btn-lg btn-block" value="Load 'Vers Une Architecture'"></input>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="phrase">Phrase:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control input-lg" id="phrase" placeholder="Enter phrase" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for=word>Replace:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control input-lg" id="word" placeholder="Enter word" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for=replacement>New Word:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control input-lg" id="replacement" placeholder="Enter replacement word" required>
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <button type="submit" class="hvr-glow btn btn-primary btn-lg btn-block">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+  </body>
+</html>
+
+
